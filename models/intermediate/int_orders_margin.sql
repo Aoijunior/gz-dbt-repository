@@ -16,5 +16,4 @@ SELECT
     ROUND(SUM(purchase_price * quantity),2) AS purchase_cost,
     ROUND(SUM(revenue) - SUM(CAST(purchase_price AS FLOAT64) * quantity), 2) AS margin
 FROM renamed
-WHERE orders_id = 1002561
 GROUP BY orders_id
