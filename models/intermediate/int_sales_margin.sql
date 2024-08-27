@@ -10,6 +10,7 @@ WITH source AS (
 
 SELECT 
     products_id,
+    date_date,
     revenue,
     quantity,
     purchase_price,
