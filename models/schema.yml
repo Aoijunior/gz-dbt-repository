@@ -50,3 +50,92 @@ sources:
             description: The logistics cost incurred for the shipment.
           - name: ship_cost
             description: The total shipping cost associated with the order.
+      
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: Fuente de datos de adwords.
+        tests:
+          - unique:
+              column_name: "(date_date || '_' || campaign_key)"
+        columns:
+          - name: date_date
+            description: La fecha de la entrada de datos.
+          - name: paid_source
+            description: La fuente que pagó por el anuncio.
+          - name: campaign_key
+            description: La clave única de la campaña de adwords.
+          - name: camPGN_name
+            description: El nombre de la campaña.
+          - name: ads_cost
+            description: El costo asociado con los anuncios.
+          - name: impression
+            description: El número de impresiones del anuncio.
+          - name: click
+            description: El número de clics en el anuncio.
+
+      - name: bing
+        identifier: raw_gz_bing
+        description: Fuente de datos de bing.
+        tests:
+          - unique:
+              column_name: "(date_date || '_' || campaign_key)"
+        columns:
+          - name: date_date
+            description: La fecha de la entrada de datos.
+          - name: paid_source
+            description: La fuente que pagó por el anuncio.
+          - name: campaign_key
+            description: La clave única de la campaña de bing.
+          - name: camPGN_name
+            description: El nombre de la campaña.
+          - name: ads_cost
+            description: El costo asociado con los anuncios.
+          - name: impression
+            description: El número de impresiones del anuncio.
+          - name: click
+            description: El número de clics en el anuncio.
+
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: Fuente de datos de criteo.
+        tests:
+          - unique:
+              column_name: "(date_date || '_' || campaign_key)"
+        columns:
+          - name: date_date
+            description: La fecha de la entrada de datos.
+          - name: paid_source
+            description: La fuente que pagó por el anuncio.
+          - name: campaign_key
+            description: La clave única de la campaña de criteo.
+          - name: camPGN_name
+            description: El nombre de la campaña.
+          - name: ads_cost
+            description: El costo asociado con los anuncios.
+          - name: impression
+            description: El número de impresiones del anuncio.
+          - name: click
+            description: El número de clics en el anuncio.
+
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: Fuente de datos de facebook.
+        tests:
+          - unique:
+              column_name: "(date_date || '_' || campaign_key)"
+        columns:
+          - name: date_date
+            description: La fecha de la entrada de datos.
+          - name: paid_source
+            description: La fuente que pagó por el anuncio.
+          - name: campaign_key
+            description: La clave única de la campaña de facebook.
+          - name: camPGN_name
+            description: El nombre de la campaña.
+          - name: ads_cost
+            description: El costo asociado con los anuncios.
+          - name: impression
+            description: El número de impresiones del anuncio.
+          - name: click
+            description: El número de clics en el anuncio.
+
