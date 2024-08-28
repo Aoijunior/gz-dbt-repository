@@ -139,3 +139,40 @@ sources:
           - name: click
             description: El número de clics en el anuncio.
 
+models:
+      - name: int_campaigns
+        description: data from all campaigns
+        tests: 
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+          - not_null:
+              column_name: paid_source
+          - not_null:
+              column_name: campaign_name
+
+      - name: int_campaigns_days
+        description: data from all campaigns for day
+        tests: 
+          - unique:
+              column_name: date_date
+          - not_null:
+              column_name: date_date
+
+      - name: finance_campaigns_day
+        description: data from all campaigns and finance for days
+        tests: 
+          - unique:
+              column_name: date_date
+          - not_null:
+              column_name: date_date
+      
+      - name: finance_campaigns_month
+        description: data from all campaigns per month
+        tests: 
+          - unique:
+              column_name: datemonth
+          - not_null:
+              column_name: datemonth
+
+
+
