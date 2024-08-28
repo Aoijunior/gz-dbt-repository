@@ -54,9 +54,6 @@ sources:
       - name: adwords
         identifier: raw_gz_adwords
         description: Fuente de datos de adwords.
-        tests:
-          - unique:
-              column_name: "(date_date || '_' || campaign_key)"
         columns:
           - name: date_date
             description: La fecha de la entrada de datos.
@@ -72,6 +69,9 @@ sources:
             description: El número de impresiones del anuncio.
           - name: click
             description: El número de clics en el anuncio.
+        tests:
+          - unique:
+              column_name: "(date_date || '_' || campaign_key)"
 
       - name: bing
         identifier: raw_gz_bing
