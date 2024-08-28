@@ -23,7 +23,11 @@ SELECT
     sum(revenue) AS revenue,
     SUM(quantity) AS quantity,
     SUM(purchase_cost) AS purchase_cost,
+    SUM(shipping_fee) AS shipping_fee,
+    ROUND(SUM(logcost),2) AS logcost,
+    ROUND(SUM(ship_cost),2) AS ship_cost,
     SUM(margin) AS margin,
     ROUND(SUM(margin + shipping_fee - logcost - ship_cost), 2) AS operational_margin
+
 FROM renamed
 GROUP BY orders_id
