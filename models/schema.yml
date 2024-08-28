@@ -50,4 +50,3 @@ sources:
             description: The logistics cost incurred for the shipment.
           - name: ship_cost
             description: The total shipping cost associated with the order.
-
