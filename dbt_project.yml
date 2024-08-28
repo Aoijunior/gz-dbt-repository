@@ -41,4 +41,4 @@ models:
     mart:
       materialized: table
       finance:
-        scheman: finance_days
+        schema: finance_days
